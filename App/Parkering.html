@@ -4,22 +4,135 @@
 
 <html>
 <head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<title>Parkering</title>
 
 	<meta charset = "utf-8">
 
 	<style>
       #map-canvas {
-        width: 281.25px;
-        height: 500.25px;
+        width: 390px;
+        height: 608px;
       }
 
       #skjerm {
       	border-style: solid;
       	border-width: medium;
-      	width: 400px;	 
+      	width: 400px;
+      	height: 615px;
+      	margin-bottom: 5px;	 
+      	background-color: #787878;
       	
       }
+
+      #knapp {
+      	margin-top: 20px;
+      	
+      }
+
+      #logo
+      {
+      	border-style: solid;
+      	background-color: black;
+      	width: 397px;
+      	height: 400px;
+      }
+
+      #logo2 {
+      	color: white;
+      	margin-top: 160px;
+      }
+/**************************
+  DEFAULT BOOTSTRAP STYLES
+**************************/
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+  
+.btn-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+/***********************
+  OUTLINE BUTTONS
+************************/
+
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+.btn-primary.outline {
+    border: 2px solid #0099cc;
+    color: #0099cc;
+}
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: #33a6cc;
+    border-color: #33a6cc;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
     </style>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
@@ -39,12 +152,17 @@
 			<center>
 			<div id="skjerm">
 		<h1>Parkering</h1>
-		<p>Finn din parkering i Oslo, ungå parkeringsbøter</p>
+		<p>Finn din parkering i Oslo, unngå parkeringsbøter</p>
+		<div id="logo">
+			<h1 id="logo2">LOGO</h1>
+		</div>
 
-
-	<div id="map-canvas"></div>
+	<button id="knapp" type="button" class="btn btn-primary btn-lg outline">Log Inn</button>
+	<button id="knapp" type="button" class="btn btn-primary btn-lg outline">Registrer</button>
 			</div>
+				<div id="skjerm">
+			<div id="map-canvas"></div>
+				</div>
 			</center>
-
 </body>
 </html>
